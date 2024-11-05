@@ -16,8 +16,8 @@ body{
     scroll-behavior: smooth;
 }
 .mylogo{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 .mylogo img{
     width: 100%;
@@ -41,13 +41,14 @@ body{
     font-size: 1.5rem;
 }
 #navbar .container{
-    padding: 20px;
+    padding: 5px;
     max-width: 1200px;
     margin: auto;
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 2px;
 }
 
 #navbar ul{
