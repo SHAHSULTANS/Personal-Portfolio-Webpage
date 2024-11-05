@@ -1,154 +1,206 @@
-/* Basic Reset */
-* {
+
+/*reset all*/
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
-body {
-    font-family: 'Helvetica', sans-serif;
+body{
     line-height: 1.6;
-    color: #333;
+    font-family: Helvetica, sans-serif;
 }
 
-/* Container */
-.container {
-    width: 90%;
+
+
+/*Navbar styling.*/
+#navbar{
+    position:fixed;
+    top: 0;
+    background-color: #333;
+    width: 100%;
+    color: white;
+}
+#navbar h1{
+    font-size: 1.5rem;
+}
+#navbar .container{
+    padding: 20px;
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
-}
-
-/* Navbar Styling */
-#navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    z-index: 10;
-}
-
-#navbar .container {
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#navbar h1 {
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-#navbar ul {
-    list-style-type: none;
+#navbar ul{
+    list-style: none;
     display: flex;
     gap: 15px;
 }
-
-#navbar ul li a {
-    color: #fff;
+#navbar ul li a{
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    color: white;
+    transition:color 0.3s, transform 0.8s;/*this property used for smooth animation between two state. quickly or slowely changes properties like color, background-color, width, height, opacity.*/
+
+    display: inline-block; /*if i don't use it, then tranform poperty will not working because of anchor tag default display property(inline)*/
+}
+#navbar ul li a:hover{
+    color:#f39c12 ;
+    transform: scale(1.3);
 }
 
-#navbar ul li a:hover {
-    color: #f39c12;
-}
-
+/*Welcome Section Styling*/
 /* Welcome Section Styling */
 #welcome-section {
     display: flex;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #2c3e50, #3498db);
-    color: #fff;
-    text-align: center;
     justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a5b);
+
+
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-#welcome-section h1 {
+/* Profile Photo Styling */
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #3498db;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.profile-photo img:hover {
+    transform: scale(1.05);
+}
+
+/* Welcome Text Styling */
+.welcome-text h1 {
     font-size: 2.5rem;
+    margin: 0;
+    color: #333;
 }
 
-#welcome-section p {
-    font-size: 1.2rem;
+.welcome-text p {
+    font-size: 1.1rem;
+    color: #444;
     margin: 10px 0 20px;
 }
 
+/* Button Styling */
 .button {
-    background-color: #f39c12;
+    background-color: #3498db;
     color: #fff;
     padding: 10px 20px;
+    border: none;
     border-radius: 5px;
     text-decoration: none;
+    font-size: 1rem;
     transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #e67e22;
+    background-color: #2980b9;
 }
 
-/* About Section Styling */
-#about {
+
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .welcome-container {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .profile-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .welcome-text h1 {
+        font-size: 3rem;
+    }
+
+    .welcome-text p {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+/* About Section */
+#about{
     padding: 50px 20px;
     background-color: #ecf0f1;
+}
+#about h2{
     text-align: center;
 }
 
-/* Projects Section Styling */
-#projects {
+
+
+#projects{
     padding: 50px 20px;
 }
-
-#projects h2 {
+#projects h2{
     font-size: 2rem;
-    margin-bottom: 30px;
     text-align: center;
+    margin-bottom: 30px;
 }
-
-.project-gallery {
+.project-gallery{
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
 }
-
-.project-tile {
+.project-tile{
     padding: 20px;
     border: 1px solid #bdc3c7;
     border-radius: 10px;
-    background-color: #fff;
     text-align: center;
 }
-
-.project-tile h3 {
-    font-size: 1.2rem;
+.project-tile h3{
+    font-size: 1.3rem;
 }
-
-.project-tile p {
-    color: #666;
+.project-tile p{
+    color: #444;
 }
-
-.project-tile a {
+.project-tile a{
     display: inline-block;
     color: #3498db;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
     margin-top: 10px;
 }
-
-.project-tile a:hover {
-    color: #2980b9;
+.project-tile a:hover{
+    color:#f59a09;
 }
+
+
+
+
 
 /* Contact Section Styling */
 #contact {
     padding: 50px 20px;
-    background-color: #333;
-    color: #fff;
+    background:#444;
+    color:white;
     text-align: center;
 }
 
@@ -159,25 +211,76 @@ body {
 
 #contact p {
     font-size: 1rem;
+    color: white;
     margin: 10px 0;
 }
 
-#contact a {
-    color: #f39c12;
+.contact-info {
+    margin: 20px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-info a {
+    color: #3498db;
     text-decoration: none;
 }
 
-#contact a:hover {
-    color: #e67e22;
+.contact-info a:hover {
+    color: #2980b9;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #navbar .container {
-        flex-direction: column;
-    }
-
-    #welcome-section h1 {
-        font-size: 2rem;
-    }
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    width: 100%;
 }
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact-form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #3498db;
+}
+
