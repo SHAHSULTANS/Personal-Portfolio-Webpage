@@ -4,11 +4,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+span{
+    font-weight: bold;
 }
 
 body{
     line-height: 1.6;
     font-family: Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+.mylogo{
+    width: 60px;
+    height: 60px;
+}
+.mylogo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+
 }
 
 
@@ -120,6 +136,34 @@ body{
 
 
 
+#username{
+    text-align:center;
+    margin-bottom: 20px;
+    animation: AddTextShadow 2s linear  infinite alternate ;
+    color:rgb(255, 255, 0);
+}
+
+@keyframes AddTextShadow {
+    0%{text-shadow: 2px 2px 5px red,-2px -2px 5px green;}
+    25%{
+        text-shadow: 2px 2px 5px rgb(252, 164, 1), -2px -2px 5px blue;
+        
+    }
+    50%{
+        text-shadow: 2px 2px 5px crimson,-2px -2px 5px rgba(232, 252, 15, 0.657);
+    }
+    75%{
+        text-shadow: 2px 2px 5px rgb(220, 207, 20),-2px -2px 5px rgba(212, 5, 239, 0.884);
+        
+    }
+    100%{
+        text-shadow: 2px 2px 5px rgb(169, 233, 50),-2px -2px 5px rgba(249, 191, 0, 0.863);
+
+    }
+    
+    
+}
+
 /* Responsive Design */
 @media (min-width: 600px) {
     .welcome-container {
@@ -149,6 +193,7 @@ body{
 #about{
     padding: 50px 20px;
     background-color: #ecf0f1;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.322);
 }
 #about h2{
     text-align: center;
@@ -158,6 +203,8 @@ body{
 
 #projects{
     padding: 50px 20px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.322);
+
 }
 #projects h2{
     font-size: 2rem;
@@ -190,6 +237,9 @@ body{
 }
 .project-tile a:hover{
     color:#f59a09;
+}
+#welcome-section,#about,#projects,#contact{
+    scroll-margin-top: 100px;
 }
 
 
