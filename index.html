@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles.css">
 </head>
 
@@ -17,7 +18,7 @@
             </div>
             <ul>
                 <li><a href="#welcome-section">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#about">About</a></li> -->
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -27,15 +28,58 @@
     <section id="welcome-section">
         <div class="welcome-container">
             <!-- Profile Photo -->
-            <div class="profile-photo">
-                <img src="https://github.com/SHAHSULTANS/Picture/raw/main/profile-pic.png" alt="Profile Photo">
+            <div id="leftaside">
+                <div class="picture-link">
+                    <div class="profile-photo">
+                        <img src="https://github.com/SHAHSULTANS/Picture/raw/main/profile-pic.png" alt="Profile Photo">
+                    </div>
+                    <div >
+                        <h1 id="username">Shah Sultan</h1>
+                        <p>Frontend Developer | IoT Enthusiast</p>
+                    </div>
+                    <div class="connection-list">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+    
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    
+    
+                    </div>
+                </div>
             </div>
             
             <!-- Welcome Text -->
             <div class="welcome-text">
-                <h1 id="username">Hi, I'm Shah Sultan</h1>
-                <p>Frontend developer and IoT enthusiast skilled in building responsive web apps and real-world IoT solutions using Arduino, ESP8266, and environmental sensors.</p>
-                <a id="profile-link" href="https://github.com/SHAHSULTANS" target="_blank" class="button">View My GitHub</a>
+                <h2 id="username">About Me</h2>
+                <p>Frontend developer skilled in building responsive web applications and IoT solutions with expertise in HTML, CSS, JavaScript, and tools like Arduino and ESP8266. I’ve developed a range of projects, including real-time chat apps, interactive quizzes, and IoT-based environmental monitoring systems. My portfolio features over 25 mini-projects, from dynamic UIs to educational resources on JavaScript and CSS, reflecting a commitment to creating impactful, user-focused digital solutions.</p>
+                <div>
+                    <a id="profile-link" href="https://github.com/SHAHSULTANS" target="_blank" class="button">Download my CV</a>
+                </div>
+
+                <div class="education-section" style="margin-top:10px;">
+                    <div class="interest">
+                        <h2>Interests</h2>
+                        <ul>
+                          <li>Full Stack Web Development</li>
+                          <li>IoT</li>
+                          <li>Data Analysis</li>
+                          <li>Education</li>
+                          <li>PhD Artificial Intelligence</li>
+                        </ul>
+                      </div>
+                    <div class="education">
+                        <h2>Education</h2>
+                        <ul>
+                            <li><span><i class="fa-solid fa-graduation-cap"></i></span> BSc in Computer Science
+                            <dd>Jahangirnagar University</dd></li>
+
+                            <li><span><i class="fa-solid fa-graduation-cap"></i></span> Edge IoT & Robotics
+                            <dd>Jahangirnagar University</dd></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -43,12 +87,12 @@
 
 
     <!-- About Section -->
-    <section id="about">
+    <!-- <section id="about">
         <div class="container">
             <h2>About Me</h2>
             <p>I’m a frontend developer focused on creating dynamic and interactive user experiences. With a solid foundation in <span>HTML</span>, <span>CSS</span>, and <span>JavaScript</span>, I have built a diverse range of projects, including a <span>Real-Time Chat Application, Weather App, Interactive Quiz Exam, and a responsive Kanban board</span>. My portfolio also features over <span>25+</span> mini-projects, such as a <span>Messenger clone, Dynamic Calendar, Todo List, and IoT applications utilizing Arduino and ESP8266 for environmental monitoring & smart solution</span>. Additionally, I have developed educational web pages that cover <span>20+ JavaScript</span> and <span>10+ CSS</span> concepts, helping others learn and improve their skills. I am committed to enhancing user interfaces and improving performance.</p>
         </div>
-    </section>
+    </section> -->
 
     <!--Project Section-->
     <section id="projects">

@@ -2,7 +2,7 @@
 /*reset all*/
 *{
     margin: 0;
-    padding: 0;
+    
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -11,6 +11,7 @@ span{
 }
 
 body{
+    padding: 0;
     line-height: 1.6;
     font-family: Helvetica, sans-serif;
     scroll-behavior: smooth;
@@ -36,6 +37,7 @@ body{
     background-color: #333;
     width: 100%;
     color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.214);
 }
 #navbar h1{
     font-size: 1.5rem;
@@ -72,30 +74,36 @@ body{
 /*Welcome Section Styling*/
 /* Welcome Section Styling */
 #welcome-section {
+    margin-top: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 100vh;
     background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a5b);
 
-
-    padding: 20px;
-    text-align: center;
+    padding: 30px;
+    
 }
 
 .welcome-container {
-    max-width: 800px;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
 }
-
+#leftaside{
+    flex: 50%;
+    padding: 20px;
+    
+}
+.picture-link{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 /* Profile Photo Styling */
 .profile-photo img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 4px solid #3498db;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -105,17 +113,28 @@ body{
 .profile-photo img:hover {
     transform: scale(1.05);
 }
+.connection-list{
+    display: flex;
+    gap: 15px; 
+}
+.connection-list a{
+    font-size: 30px;
 
+}
+.welcome-text{
+    margin-left: 20px;
+}
 /* Welcome Text Styling */
-.welcome-text h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    color: #333;
+
+#username{
+    margin-bottom: 20px;
+    animation: AddTextShadow 2s linear  infinite alternate ;
+    color:rgb(255, 255, 0);
 }
 
 .welcome-text p {
     font-size: 1.1rem;
-    color: #444;
+    color:black;
     margin: 10px 0 20px;
 }
 
@@ -135,14 +154,17 @@ body{
     background-color: #2980b9;
 }
 
-
-
-#username{
-    text-align:center;
-    margin-bottom: 20px;
-    animation: AddTextShadow 2s linear  infinite alternate ;
-    color:rgb(255, 255, 0);
+.education-section{
+    display: flex;
+    justify-content: space-between;
+    color: #111;
 }
+
+i{
+    color: #077cca;
+}
+
+
 
 @keyframes AddTextShadow {
     0%{text-shadow: 2px 2px 5px red,-2px -2px 5px green;}
@@ -166,15 +188,18 @@ body{
 }
 
 /* Responsive Design */
-@media (min-width: 600px) {
+@media (max-width: 750px) {
+    #welcome-section{      
+        padding-top: 100px;
+    }
     .welcome-container {
         flex-direction: row;
-        gap: 40px;
+        gap: 20px;
     }
 
     .profile-photo img {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
     .welcome-text h1 {
@@ -185,7 +210,19 @@ body{
         font-size: 1.2rem;
     }
 }
-
+@media (max-width: 600px) {
+    .welcome-container{
+        flex-direction: column;
+    }
+    .picture-link{
+        gap: 5px;
+        justify-content: center;
+        text-align: center;
+    }
+    .connection-list{
+        justify-content: center;
+    }
+}
 
 
 
@@ -330,7 +367,7 @@ body{
     font-size: 1.1rem;
     transition: color 0.3s;
 }
-
+ 
 .social-icons a:hover {
     color: #3498db;
 }
