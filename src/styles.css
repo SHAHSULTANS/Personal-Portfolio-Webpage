@@ -80,7 +80,6 @@ body{
     justify-content: space-between;
     min-height: 100vh;
     background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a5b);
-
     padding: 30px;
     
 }
@@ -88,12 +87,89 @@ body{
 .welcome-container {
     width: 100%;
     display: flex;
+    gap: 20px;
 }
-#leftaside{
-    flex: 50%;
+#leftaside {
+    position: relative;
+    flex: 1;
     padding: 20px;
-    
+    border-radius: 10px;
+    border: 1px solid #f7f5f0;
+    overflow: hidden;
 }
+
+/* Point on the top border */
+#leftaside::before {
+    content: '';
+    position: absolute;
+    width: 8px; /* Size of the point */
+    height: 8px;
+    background-color: #ffdd7e; /* Same color as border or another color for contrast */
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    animation: moveTop 4s linear infinite;
+}
+
+/* Point on the right border */
+#leftaside::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #ffdd7e;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    animation: moveRight 4s linear infinite;
+}
+
+/* Extra pseudo-elements for the bottom and left borders */
+#leftaside .point-bottom {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #ffdd7e;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    animation: moveBottom 4s linear infinite;
+}
+
+#leftaside .point-left {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #ffdd7e;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    animation: moveLeft 4s linear infinite;
+}
+
+/* Keyframes for each point to move along one side of the border */
+@keyframes moveTop {
+    0% { left: 0; }
+    100% { left: 100%; }
+}
+
+@keyframes moveRight {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+@keyframes moveBottom {
+    0% { left: 100%; }
+    100% { left: 0; }
+}
+
+@keyframes moveLeft {
+    0% { top: 100%; }
+    100% { top: 0; }
+}
+
+
+
 .picture-link{
     text-align: center;
     display: flex;
@@ -101,7 +177,7 @@ body{
     gap: 10px;
 }
 /* Profile Photo Styling */
-.profile-photo img {
+.profile-photo img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -116,13 +192,15 @@ body{
 .connection-list{
     display: flex;
     gap: 15px; 
+    justify-content: center;
 }
 .connection-list a{
     font-size: 30px;
 
 }
 .welcome-text{
-    margin-left: 20px;
+    flex: 3;
+    margin-left: 10px;
 }
 /* Welcome Text Styling */
 
@@ -167,7 +245,7 @@ i{
 
 
 @keyframes AddTextShadow {
-    0%{text-shadow: 2px 2px 5px red,-2px -2px 5px green;}
+    0%{text-shadow: 2px 2px 5px #3498db,-2px -2px 5px green;}
     25%{
         text-shadow: 2px 2px 5px rgb(252, 164, 1), -2px -2px 5px blue;
         
@@ -187,6 +265,11 @@ i{
     
 }
 
+@media (max-width: 950px) {
+    #leftaside{
+        flex: 1.5;
+    }
+}
 /* Responsive Design */
 @media (max-width: 750px) {
     #welcome-section{      
