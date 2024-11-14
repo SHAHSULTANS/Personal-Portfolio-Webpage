@@ -5,6 +5,7 @@
     
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 span{
     font-weight: bold;
@@ -56,7 +57,7 @@ body{
 #navbar ul{
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 #navbar ul li a{
     text-decoration: none;
@@ -66,7 +67,7 @@ body{
 
     display: inline-block; /*if i don't use it, then tranform poperty will not working because of anchor tag default display property(inline)*/
 }
-#navbar ul li a:hover{
+#navbar ul li a:hover,#navbar ul li a.active{
     color:#f39c12 ;
     transform: scale(1.3);
 }
@@ -94,8 +95,8 @@ body{
     flex: 1;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #f7f5f0;
-    overflow: hidden;
+    border: 1px solid white;
+    
 }
 
 /* Point on the top border */
@@ -235,7 +236,10 @@ body{
 .education-section{
     display: flex;
     justify-content: space-between;
-    color: #111;
+    color: #222;
+}
+.education-section ul{
+    font-weight:500;
 }
 
 i{
@@ -305,7 +309,9 @@ i{
     .connection-list{
         justify-content: center;
     }
+    
 }
+
 
 
 
@@ -328,18 +334,40 @@ i{
 
 }
 #projects h2{
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 30px;
 }
 .project-gallery{
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit,minmax(45%,1fr));
+}
+.project{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.project-image{
+    flex: 1.5;
+    width: 100%;
+    
+    height: auto;
+    padding: 5px;
+    max-height: 250px;
+    
+}
+.project-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 .project-tile{
+    flex: 1;
     padding: 20px;
     border: 1px solid #bdc3c7;
+   
     border-radius: 10px;
     text-align: center;
 }
@@ -360,7 +388,18 @@ i{
     color:#f59a09;
 }
 #welcome-section,#about,#projects,#contact{
-    scroll-margin-top: 100px;
+    scroll-margin-top: 58px;
+}
+
+
+@media screen and (max-width:900px){
+    .project-gallery{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+    }
+    
+    
 }
 
 
