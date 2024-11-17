@@ -83,6 +83,7 @@ body{
     justify-content: space-between;
     min-height: 100vh;
     background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a5b);
+    
     padding: 30px;
     
 }
@@ -98,6 +99,10 @@ body{
     padding: 20px;
     border-radius: 10px;
     border: 1px solid white;
+
+    /*background: linear-gradient(135deg, #f76a6a, #f89c7d, #ff8a85);
+    */
+
     
 }
 
@@ -290,6 +295,7 @@ i{
     .welcome-container {
         flex-direction: row;
         gap: 20px;
+        width: 95%;
     }
 
     .profile-photo img {
@@ -305,7 +311,7 @@ i{
         font-size: 1.2rem;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .welcome-container{
         flex-direction: column;
     }
@@ -317,6 +323,45 @@ i{
     .connection-list{
         justify-content: center;
     }
+    
+}
+@media screen and (max-width:451px) {
+    #navbar .container{
+        width: 100%;
+    }
+    #navbar ul{
+        gap: 15px;
+    }
+    #navbar ul a{
+        font-size: 13px;
+    }
+    #welcome-section{
+        padding: 10px;
+    }
+    
+
+    
+}
+@media screen and (max-width:350px) {
+    .education-section{
+        flex-direction: column;
+    }
+    #navbar .container{
+       justify-content: space-around;
+     
+    }
+    #navbar ul{
+        padding-left: 2px;
+        gap: 8px;
+
+    }
+    .mylogo{
+        width: 40px;
+        height: 40px;
+    }
+   
+   
+    
     
 }
 
@@ -352,7 +397,7 @@ i{
     grid-template-columns: repeat(auto-fit,minmax(45%,1fr));
 }
 .project{
-    border: 1px solid black;
+    border: 1px solid #bbb;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
