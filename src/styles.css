@@ -16,6 +16,7 @@ body{
     line-height: 1.6;
     font-family: Helvetica, sans-serif;
     scroll-behavior: smooth;
+    background-color:#f1f1f1;
 }
 .mylogo{
     width: 50px;
@@ -397,10 +398,11 @@ i{
     grid-template-columns: repeat(auto-fit,minmax(45%,1fr));
 }
 .project{
-    border: 1px solid #bbb;
+    border: 2px solid #bbb;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.377);
 }
 .project-image{
     flex: 1.5;
