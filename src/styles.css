@@ -126,6 +126,8 @@ body {
 .welcome-container {
     width: 100%;
     display: flex;
+    max-width: 1400px;
+    margin:auto;
     gap: 20px;
 }
 
