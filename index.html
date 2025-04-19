@@ -9,6 +9,42 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles.css">
+    <style>
+        .view-all-container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    
+        .view-all-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #ffffff;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            letter-spacing: 0.5px;
+        }
+    
+        .view-all-btn:hover {
+            background: linear-gradient(135deg, #0f2b4f, #2c6b93);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+    
+        @media (max-width: 600px) {
+            .view-all-btn {
+                padding: 12px 24px;
+                font-size: 15px;
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -219,6 +255,12 @@
                 </div>
             </div>
 
+        </div>
+        <!-- View All Projects Button -->
+        <div class="view-all-container">
+            <a href="https://miniproject-chi-smoky.vercel.app/create_messenger.html" target="_blank" class="view-all-btn">
+                🔗 View All Projects
+            </a>
         </div>
     </section>
 
